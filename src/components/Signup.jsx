@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import authService from "../appwrite/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { login as authLogin } from "../features/authSlice";
-import { Button, Input, Logo } from "./index";
+import { Button, Input, Logo } from "./index.js";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 function Signup() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [error, seterror] = useState();
+  const [error, seterror] = useState("");
   const { register, handleSubmit } = useForm();
 
   const CreateAccount = async (data) => {

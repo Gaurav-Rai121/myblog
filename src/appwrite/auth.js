@@ -1,5 +1,5 @@
 import { Client, Account, ID } from "appwrite";
-import config from "../config/config";
+import config from "../config/config.js";
 
 export class AuthService{
     client = new Client();
@@ -55,11 +55,11 @@ export class AuthService{
   async UserCurrentStatus(){
     try 
     {
-        await this.account.get()
+         return await this.account.get()
     } 
     catch (error) 
     {
-        throw error
+      console.log("Appwrite serive :: userCurrentStatus :: error", error);
     }
 
     return null

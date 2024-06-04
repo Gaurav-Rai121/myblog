@@ -4,7 +4,8 @@ import authService from "./appwrite/auth";
 import { useEffect } from "react";
 import { login, logout } from "./features/authSlice";
 import { Footer, Header } from "./components";
-
+import { Outlet } from "react-router-dom";
+import './App.css'
 
 function App() {
 const [loading,setloading]=useState(true);
@@ -13,10 +14,10 @@ const dispatch= useDispatch()
 
 useEffect(()=>{
   authService.UserCurrentStatus()
-  .then((userdata)=>{
-    if(userdata)
+  .then((userData)=>{
+    if(userData)
       {
-         dispatch(login({userdata}))
+         dispatch(login({userData}))
       }
     
     else
@@ -37,7 +38,7 @@ return !loading?(
     <div className="w-full block">
       <Header/>
       <main>
-        hello
+       <Outlet/>
       </main>
       <Footer/>
     </div>
