@@ -39,7 +39,7 @@ export class AuthService{
    } 
 
 //code to login a user from appwrite databse in appwrite
-   async LoginUser(){
+   async LoginUser({email,password}){
       try 
       {
         let login=await this.account.createEmailSession(email,password);
