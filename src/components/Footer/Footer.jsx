@@ -136,7 +136,8 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </section>  )
+        </section>
+  )
 }
 
 export default Footer
