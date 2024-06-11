@@ -38,10 +38,10 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
-      <Container>
+    <header className='py-3 shadow bg-gray-200  position:sticky'>
+      
         <nav className='flex'>
-          <div className='mr-4'>
+          <div className='mr-4 ml-5 mt-1'>
             <Link to='/'>
               <Logo width='70px'   />
 
@@ -65,9 +65,9 @@ function Header() {
             )}
           </ul>
         </nav>
-        </Container>
+        
     </header>
   )
 }
 
-export default Header
+export default Header;
